@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Crud from "./Crud";
+import Ventas from "./Ventas";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container">
+          <Link className="navbar-brand" to="/">Ferretería</Link>
+          <div>
+            <Link className="nav-link d-inline text-white" to="/">CRUD</Link>
+            <Link className="nav-link d-inline text-white" to="/ventas">Ventas</Link>
+          </div>
+        </div>
+      </nav>
+
+      <div className="container mt-4">
+        <Routes>
+          <Route path="/" element={<Crud />} />
+          <Route path="/ventas" element={<Ventas />} />
+        </Routes>
+      </div>
+    </>
   );
 }
-
-export default App;
