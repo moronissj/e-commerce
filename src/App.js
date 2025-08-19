@@ -19,7 +19,7 @@ export default function App() {
       <div className="container mt-4">
         <Routes>
           <Route path="/" element={<Crud />} />
-          <Route path="/ventas" element={<Ventas />} />
+            <Route path="/ventas" element={<Ventas />} />
         </Routes>
       </div>
     </>
