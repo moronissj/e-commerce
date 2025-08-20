@@ -10,16 +10,16 @@ export default function App() {
         <div className="container">
           <Link className="navbar-brand" to="/">Ferretería</Link>
           <div>
-            <Link className="nav-link d-inline text-white" to="/">CRUD</Link>
-            <Link className="nav-link d-inline text-white" to="/ventas">Ventas</Link>
+            <Link className="nav-link d-inline text-white" to="/">Tienda{" "}</Link>
+            <Link className="nav-link d-inline text-white" to="/gestion">Gestion</Link>
           </div>
         </div>
       </nav>
 
       <div className="container mt-4">
         <Routes>
-          <Route path="/" element={<Crud />} />
-            <Route path="/ventas" element={<Ventas />} />
+          <Route path="/" element={<Ventas />} />
+            <Route path="/gestion" element={<Crud />} />
         </Routes>
       </div>
     </>
